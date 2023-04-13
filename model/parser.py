@@ -18,7 +18,6 @@ class Category(Enum):
         return self.name
 
 class RelationName(Enum):
-
     ROOT = 0
     SUBJ = 1
     NOBJ = 2
@@ -32,14 +31,7 @@ class RelationName(Enum):
     def __str__(self):
         return self.name
 
-class Tense(Enum):
-    PAST  = 0
-    PRES = 1
-    FUT = 2
-
-
 class Prep_SEM(Enum):
-
     FROM = 0
     TO = 1
 
@@ -47,7 +39,6 @@ class Prep_SEM(Enum):
         return self.name
 
 class Verb_SEM(Enum):
-
     DEPART = 0
     ARRIVE = 1
 
@@ -55,7 +46,6 @@ class Verb_SEM(Enum):
         return self.name
 
 class Token(object):
-
     def __init__(self, word, cat, sem,index):
         self.word = word
         self.category = cat
@@ -209,7 +199,6 @@ class Relation(object):
     #return Relation object
 
 class GrammarRelation(object):
-
     def __init__(self, name, relation,left, right):
         self.name = name
         self.relation = relation
